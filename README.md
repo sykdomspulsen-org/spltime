@@ -1,2 +1,2 @@
 # spltime
-Datetime functionalities..
+Datetime functionalities...
