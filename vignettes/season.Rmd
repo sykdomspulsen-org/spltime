@@ -1,0 +1,51 @@
+---
+title: "Season week"
+author: "Chi Zhang"
+date: "`r Sys.Date()`"
+output:
+  rmarkdown::html_vignette:
+    fig_width: 6
+    fig_height: 6
+vignette: >
+  %\VignetteIndexEntry{Season week}
+  %\VignetteEncoding{UTF-8}
+  %\VignetteEngine{knitr::rmarkdown}
+editor_options: 
+  chunk_output_type: console
+---
+
+```{r setup, include = FALSE}
+knitr::opts_chunk$set(
+  collapse = TRUE,
+  comment = "#>"
+)
+```
+
+
+Season week conversion is used for certain outcome of interest, such as influenza.
+
+ISO week can be 1 to 53. 
+
+Season week can be 1 to 52. ISO week 53 is season week 23.5.
+
+```{r}
+library(spltime)
+library(magrittr)
+```
+
+
+
+
+```{r}
+seasonweek_to_isoweek_c(10)
+seasonweek_to_isoweek_n(10)
+isoweek_to_seasonweek_n(1)  # only has n
+```
+
+
+
+```{r}
+seasonweek_to_isoweek_n(1:52)
+isoweek_to_seasonweek_n(1:53)  
+```
+

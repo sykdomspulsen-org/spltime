@@ -1,0 +1,58 @@
+---
+title: "spltime"
+output: rmarkdown::html_vignette
+author: "Chi Zhang"
+date: "2021-09-15"
+vignette: >
+  %\VignetteIndexEntry{spltime}
+  %\VignetteEncoding{UTF-8}
+  %\VignetteEngine{knitr::rmarkdown}
+editor_options: 
+  chunk_output_type: console
+---
+
+```{r, include = FALSE}
+knitr::opts_chunk$set(
+  collapse = TRUE,
+  comment = "#>"
+)
+```
+
+`spltime` provides date time functions for public health purposes.
+
+The core functionality is consistent time conversion between 
+
+- date
+- isoyear, isoweek, isoyearweek
+- season week.
+
+It also provides functions to generate rolling dates for computing the weekly, bi-weekly, 4 week averages. 
+
+`spltime` is part of the `fhiverse` package suite.
+
+
+```{r setup}
+library(spltime)
+library(magrittr)
+```
+
+To convert a date to a year/week: 
+
+```{r}
+date_to_isoyear_c('2021-01-01')
+```
+
+
+To convert a year-week string to year/week: 
+
+```{r}
+isoyearweek_to_isoyear_c("2021-02")
+isoyearweek_to_isoweek_c("2021-02")
+```
+
+To convert a season week to ISO (natural) week: 
+
+```{r}
+seasonweek_to_isoweek_n(10)
+isoweek_to_seasonweek_n(1)  
+```

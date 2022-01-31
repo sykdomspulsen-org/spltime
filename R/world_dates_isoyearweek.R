@@ -27,6 +27,8 @@ gen_world_dates_isoyearweek <- function() {
   fri <- NULL
   sat <- NULL
   sun <- NULL
+  # declare isoyear and isoyearweek to NULL 
+  # 36,37
   
   days <- data.table::data.table(day = seq.Date(as.Date("1990-01-01"), as.Date("2040-01-01"), by = "days"))
   days[, year := as.integer(format.Date(day, format = "%G"))]
