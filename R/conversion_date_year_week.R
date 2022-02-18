@@ -135,9 +135,9 @@ isoyearweek_to_isoweek_c <- function(yrwk){
 #' Returns the last isoyearweek in the isoyear
 #' @param x ISO year, e.g. 2020
 #' @examples
-#' last_isoyearweek_c_in_isoyear(c(2019, 2019, 2020, 2021))
+#' isoyear_to_last_isoyearweek_c(c(2019, 2019, 2020, 2021))
 #' @export
-last_isoyearweek_c_in_isoyear <- function(x){
+isoyear_to_last_isoyearweek_c <- function(x){
   x <- as.numeric(x)
   retval <- data.table(isoyear=x)[spltime::dates_by_isoyearweek,on="isoyear", isoyearweek := isoyearweek]$isoyearweek
   
@@ -149,9 +149,9 @@ last_isoyearweek_c_in_isoyear <- function(x){
 #' Returns the last date in the isoyear
 #' @param x ISO year, e.g. 2020
 #' @examples
-#' last_date_in_isoyear(c(2019, 2019, 2020, 2021))
+#' isoyear_to_last_date(c(2019, 2019, 2020, 2021))
 #' @export
-last_date_in_isoyear <- function(x){
+isoyear_to_last_date <- function(x){
   x <- as.numeric(x)
   retval <- data.table(isoyear=x)[spltime::dates_by_isoyearweek,on="isoyear", sun := sun]$sun
   
@@ -163,9 +163,9 @@ last_date_in_isoyear <- function(x){
 #' Returns the last date in the isoyearweek
 #' @param x ISO yearweek, e.g. "2020-19" for 19th week in 2020
 #' @examples
-#' last_date_in_isoyearweek_c(c("2019-19", "2020-01"))
+#' isoyearweek_to_last_date(c("2019-19", "2020-01"))
 #' @export
-last_date_in_isoyearweek_c <- function(x){
+isoyearweek_to_last_date <- function(x){
   retval <- data.table(isoyearweek=x)[spltime::dates_by_isoyearweek,on="isoyearweek", sun := sun]$sun
   
   return(retval)
