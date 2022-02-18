@@ -139,7 +139,8 @@ isoyearweek_to_isoweek_c <- function(yrwk){
 #' @export
 last_isoyearweek_c_in_isoyear <- function(x){
   x <- as.numeric(x)
-  retval <- data.table(isoyear=x)[dates_by_isoyearweek,on="isoyear", isoyearweek := isoyearweek]$isoyearweek
+  ref <- dates_by_isoyearweek
+  retval <- data.table(isoyear=x)[ref,on="isoyear", isoyearweek := isoyearweek]$isoyearweek
   
   return(retval)
 }
@@ -153,7 +154,8 @@ last_isoyearweek_c_in_isoyear <- function(x){
 #' @export
 last_date_in_isoyear <- function(x){
   x <- as.numeric(x)
-  retval <- data.table(isoyear=x)[dates_by_isoyearweek,on="isoyear", sun := sun]$sun
+  ref <- dates_by_isoyearweek
+  retval <- data.table(isoyear=x)[ref,on="isoyear", sun := sun]$sun
   
   return(retval)
 }
@@ -166,7 +168,8 @@ last_date_in_isoyear <- function(x){
 #' last_date_in_isoyearweek_c(c("2019-19", "2020-01"))
 #' @export
 last_date_in_isoyearweek_c <- function(x){
-  retval <- data.table(isoyearweek=x)[dates_by_isoyearweek,on="isoyearweek", sun := sun]$sun
+  ref <- dates_by_isoyearweek
+  retval <- data.table(isoyearweek=x)[ref,on="isoyearweek", sun := sun]$sun
   
   return(retval)
 }
