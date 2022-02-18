@@ -1,4 +1,5 @@
 #' @import data.table
+#' @importFrom magrittr %>%
 .onAttach <- function(libname, pkgname) {
   version <- tryCatch(
     utils::packageDescription("spltime", fields = "Version"),
