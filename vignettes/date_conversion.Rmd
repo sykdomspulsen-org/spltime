@@ -68,6 +68,6 @@ isoyearweek_to_isoweek_n("2021-02")
 A list of `isoyearweek` can be accessed in the following way. 
 
 ```{r}
-yrwk_19_20 <- world_dates_isoyearweek[year %in% c(2019, 2020)]
+yrwk_19_20 <- dates_by_isoyearweek[isoyear %in% c(2019, 2020)]
 head(yrwk_19_20)
 ```
