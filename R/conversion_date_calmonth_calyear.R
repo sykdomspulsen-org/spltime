@@ -29,7 +29,7 @@ date_to_calyear_c <- function(x = lubridate::today()) {
 #' date_to_calyear_n(lubridate::today())
 date_to_calyear_n <- function(x = lubridate::today()) {
   yr <- format.Date(x, "%Y")
-  yr <- as.numeric(yr)
+  yr <- as.integer(yr)
   return(yr)
 }
 
@@ -64,7 +64,7 @@ date_to_calmonth_n <- function(x = lubridate::today()) {
   # wk <- data.table::isoweek(date)
   # wk <- formatC(wk, flag = "0", width = 2)
   wk <- format.Date(x, "%m")
-  wk <- as.numeric(wk)
+  wk <- as.integer(wk)
   return(wk)
 }
 
