@@ -5,25 +5,17 @@
 \title{Date -> calmonth (character)}
 \usage{
 date_to_calmonth_c(x = lubridate::today())
-
-date_to_calmonth_c(x = lubridate::today())
 }
 \arguments{
 \item{x}{a Date object or string, in the form of 'yyyy-mm-dd'}
 }
 \value{
 calmonth ("XX")
-
-calyearmonth ("YYYYMXX")
 }
 \description{
 Date -> calmonth (character)
-
-Date -> calyearmonth (character)
 }
 \examples{
 date_to_calmonth_c('2021-08-11')
 date_to_calmonth_c(lubridate::today())
-date_to_calyearmonth_c('2021-08-11')
-date_to_calyearmonth_c(lubridate::today())
 }

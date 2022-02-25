@@ -78,7 +78,7 @@ date_to_calmonth_n <- function(x = lubridate::today()) {
 #' @examples
 #' date_to_calyearmonth_c('2021-08-11')
 #' date_to_calyearmonth_c(lubridate::today())
-date_to_calmonth_c <- function(x = lubridate::today()) {
+date_to_calyearmonth_c <- function(x = lubridate::today()) {
   format.Date(x, "%YM%m")
 }
 
