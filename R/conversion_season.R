@@ -53,3 +53,28 @@ seasonweek_to_isoweek_n <- function(seasonweek){
   retval[seasonweek == 23.5] <- 53
   return(retval)
 }
+
+#' ISO yearweek to season.
+#' 
+#' @param x isoyearweek
+#' @examples 
+#' isoyearweek_to_season_c(c("2021-01","2021-50"))
+#' @export
+isoyearweek_to_season_c <- function(x){
+  isoweeks <- isoyearweek_to_isoweek_n(x)
+  isoyears <- isoyearweek_to_isoyear_n(x)
+  dplyr::case_when(
+    isoweeks >= 30 ~ paste0(isoyears,"/",isoyears+1),
+    TRUE ~ paste0(isoyears-1,"/",isoyears)
+  )
+}
+
+#' Date to season.
+#' 
+#' @param x date
+#' @examples 
+#' date_to_season_c(c("2021-01-01","2021-12-01"))
+#' @export
+date_to_season_c <- function(x){
+  isoyearweek_to_season_c(date_to_isoyearweek_c(x))
+}
