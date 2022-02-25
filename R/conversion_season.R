@@ -17,6 +17,16 @@ isoweek_to_seasonweek_n <- function(isoweek){
   return(retval)
 }
 
+#' ISO yearweek to season week (numeric). Season week 1 is natural week 30.
+#' 
+#' @param x ISO yearweek
+#' @examples 
+#' isoyearweek_to_seasonweek_n(c("2021-01"))
+#' @export
+isoyearweek_to_seasonweek_n <- function(x){
+  isoweek_to_seasonweek_n(isoyearweek_to_isoweek_n(x))
+}
+
 
 #' Season week to ISO week (character). Season week 1 is ISO week 30.
 #' 
@@ -77,4 +87,14 @@ isoyearweek_to_season_c <- function(x){
 #' @export
 date_to_season_c <- function(x){
   isoyearweek_to_season_c(date_to_isoyearweek_c(x))
+}
+
+#' Date to season week.
+#' 
+#' @param x date
+#' @examples 
+#' date_to_seasonweek_n(c("2021-01-01","2021-12-01"))
+#' @export
+date_to_seasonweek_n <- function(x){
+  isoyearweek_to_seasonweek_n(date_to_isoyearweek_c(x))
 }

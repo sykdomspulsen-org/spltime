@@ -144,6 +144,17 @@ isoyear_to_last_isoyearweek_c <- function(x){
   return(retval)
 }
 
+#' Last ISO week (numeric) in ISO year
+#' 
+#' Returns the last week in the isoyear
+#' @param x ISO year, e.g. 2020
+#' @examples
+#' isoyear_to_last_isoweek_n(c(2019, 2019, 2020, 2021))
+#' @export
+isoyear_to_last_isoweek_n <- function(x){
+  isoyearweek_to_isoweek_n(isoyear_to_last_isoyearweek_c(x))
+}
+
 #' Last date in ISO year
 #' 
 #' Returns the last date in the isoyear
