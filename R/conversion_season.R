@@ -61,7 +61,7 @@ seasonweek_to_isoweek_n <- function(seasonweek){
   retval[seasonweek <= 23] <- seasonweek[seasonweek <= 23] + 29
   retval[seasonweek > 23] <- seasonweek[seasonweek >23] - 23
   retval[seasonweek == 23.5] <- 53
-  return(retval)
+  return(as.integer(retval))
 }
 
 #' ISO yearweek to season.

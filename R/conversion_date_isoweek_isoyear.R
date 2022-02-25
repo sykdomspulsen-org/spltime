@@ -59,7 +59,7 @@ date_to_isoyearweek_c <- function(x = lubridate::today()){
 #' date_to_isoyear_n('2021-08-11')
 #' date_to_isoyear_n(lubridate::today())
 date_to_isoyear_n <- function(x = lubridate::today()) {
-  yr <- as.numeric(date_to_isoyear_c(x))
+  yr <- as.integer(date_to_isoyear_c(x))
   return(yr)
 }
 
@@ -74,7 +74,7 @@ date_to_isoyear_n <- function(x = lubridate::today()) {
 #' date_to_isoweek_n('2021-08-11')
 #' date_to_isoweek_n(lubridate::today())
 date_to_isoweek_n <- function(x = lubridate::today()) {
-  wk <- as.numeric(date_to_isoweek_c(x))
+  wk <- as.integer(date_to_isoweek_c(x))
   return(wk)
 }
 
@@ -89,7 +89,7 @@ date_to_isoweek_n <- function(x = lubridate::today()) {
 #' @export
 isoyearweek_to_isoyear_n <- function(yrwk){
   year_n <- stringr::str_split(yrwk, pattern = '-') %>%
-    purrr::map_chr(., function(x){x[1]}) %>% as.numeric()
+    purrr::map_chr(., function(x){x[1]}) %>% as.integer()
   return(year_n)
 }
 
@@ -111,7 +111,7 @@ isoyearweek_to_isoyear_c <- function(yrwk){
 #' @export
 isoyearweek_to_isoweek_n <- function(yrwk){
   week_n <- stringr::str_split(yrwk, pattern = '-') %>%
-    purrr::map_chr(., function(x){x[2]}) %>% as.numeric()
+    purrr::map_chr(., function(x){x[2]}) %>% as.integer()
   return(week_n)
 }
 
