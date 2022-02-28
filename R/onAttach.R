@@ -3,11 +3,11 @@
 .onAttach <- function(libname, pkgname) {
   version <- tryCatch(
     utils::packageDescription("spltime", fields = "Version"),
-    warning = function(w){
+    warning = function(w) {
       1
     }
   )
-  
+
   packageStartupMessage(paste0(
     "spltime ",
     version,

@@ -33,9 +33,9 @@ gen_dates_by_isoyearweek <- function() {
   fri <- NULL
   sat <- NULL
   sun <- NULL
-  # declare isoyear and isoyearweek to NULL 
+  # declare isoyear and isoyearweek to NULL
   # 36,37
-  
+
   days <- data.table::data.table(day = seq.Date(as.Date("1950-01-02"), as.Date("2100-01-01"), by = "days"))
   days[, isoyear := as.integer(format.Date(day, format = "%G"))]
   days[, isoyearweek := format.Date(day, format = "%G-%V")]
@@ -49,9 +49,9 @@ gen_dates_by_isoyearweek <- function() {
   days[, weekdays := list(list(c(mon[1], tue[1], wed[1], thu[1], fri[1]))), by = isoyearweek]
   days[, weekend := list(list(c(sat[1], sun[1]))), by = isoyearweek]
   days[, days := list(list(c(mon[1], tue[1], wed[1], thu[1], fri[1], sat[1], sun[1]))), by = isoyearweek]
-  
+
   setkey(days, isoyear, isoyearweek, mon, tue, wed, thu, fri, sat, sun)
-  
+
   return(days)
 }
 # x <- gen_dates_by_isoyearweek()

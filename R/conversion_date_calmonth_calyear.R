@@ -1,6 +1,6 @@
-# 
+#
 # date -> calyear ====
-# 
+#
 
 #' Date -> calyear (character)
 #'
@@ -10,7 +10,7 @@
 #' @export
 #'
 #' @examples
-#' date_to_calyear_c('2021-08-11')
+#' date_to_calyear_c("2021-08-11")
 #' date_to_calyear_c(lubridate::today())
 date_to_calyear_c <- function(x = lubridate::today()) {
   yr <- format.Date(x, "%Y")
@@ -25,7 +25,7 @@ date_to_calyear_c <- function(x = lubridate::today()) {
 #' @export
 #'
 #' @examples
-#' date_to_calyear_n('2021-08-11')
+#' date_to_calyear_n("2021-08-11")
 #' date_to_calyear_n(lubridate::today())
 date_to_calyear_n <- function(x = lubridate::today()) {
   yr <- format.Date(x, "%Y")
@@ -41,7 +41,7 @@ date_to_calyear_n <- function(x = lubridate::today()) {
 #' @export
 #'
 #' @examples
-#' date_to_calmonth_c('2021-08-11')
+#' date_to_calmonth_c("2021-08-11")
 #' date_to_calmonth_c(lubridate::today())
 date_to_calmonth_c <- function(x = lubridate::today()) {
   # wk <- data.table::isoweek(date)
@@ -58,7 +58,7 @@ date_to_calmonth_c <- function(x = lubridate::today()) {
 #' @export
 #'
 #' @examples
-#' date_to_calmonth_n('2021-08-11')
+#' date_to_calmonth_n("2021-08-11")
 #' date_to_calmonth_n(lubridate::today())
 date_to_calmonth_n <- function(x = lubridate::today()) {
   # wk <- data.table::isoweek(date)
@@ -76,10 +76,8 @@ date_to_calmonth_n <- function(x = lubridate::today()) {
 #' @export
 #'
 #' @examples
-#' date_to_calyearmonth_c('2021-08-11')
+#' date_to_calyearmonth_c("2021-08-11")
 #' date_to_calyearmonth_c(lubridate::today())
 date_to_calyearmonth_c <- function(x = lubridate::today()) {
   format.Date(x, "%Y-M%m")
 }
-
-
