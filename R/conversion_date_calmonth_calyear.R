@@ -72,14 +72,14 @@ date_to_calmonth_n <- function(x = lubridate::today()) {
 #'
 #' @param x a Date object or string, in the form of 'yyyy-mm-dd'
 #'
-#' @return calyearmonth ("YYYYMXX")
+#' @return calyearmonth ("YYYY-MXX")
 #' @export
 #'
 #' @examples
 #' date_to_calyearmonth_c('2021-08-11')
 #' date_to_calyearmonth_c(lubridate::today())
 date_to_calyearmonth_c <- function(x = lubridate::today()) {
-  format.Date(x, "%YM%m")
+  format.Date(x, "%Y-M%m")
 }
 
 

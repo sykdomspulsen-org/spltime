@@ -10,7 +10,7 @@ date_to_calyearmonth_c(x = lubridate::today())
 \item{x}{a Date object or string, in the form of 'yyyy-mm-dd'}
 }
 \value{
-calyearmonth ("YYYYMXX")
+calyearmonth ("YYYY-MXX")
 }
 \description{
 Date -> calyearmonth (character)
