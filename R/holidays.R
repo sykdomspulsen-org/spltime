@@ -17,8 +17,6 @@
 #' @format
 #' \describe{
 #' \item{isoyearweek}{YYYY-WW}
-#' \item{mon_to_fri}{The proportion of the days within the isoyearweek that are Monday to Friday (5/7)}
-#' \item{sat_to_sun}{The proportion of the days within the isoyearweek that are Saturday to Sunday (2/7)}
 #' \item{public_holiday}{The proportion of the days within the isoyearweek that are public holidays}
 #' \item{freeday}{The proportion of the days within the isoyearweek that are either public holidays or Saturday/Sunday}
 #' \item{workday}{1 minus freeday}
@@ -69,8 +67,6 @@ gen_norway_workdays_by_isoyearweek <- function(){
   
   norway_workdays_by_isoyearweek <- norway_workdays_by_date[, .(
     days = .N,
-    mon_to_fri = round(mean(mon_to_fri),2),
-    sat_to_sun = round(mean(sat_to_sun),2),
     public_holiday = round(mean(public_holiday),2),
     freeday = round(mean(freeday),2),
     workday = round(mean(workday),2)
