@@ -16,6 +16,6 @@ calyearmonth ("YYYY-MXX")
 Date -> calyearmonth (character)
 }
 \examples{
-date_to_calyearmonth_c('2021-08-11')
+date_to_calyearmonth_c("2021-08-11")
 date_to_calyearmonth_c(lubridate::today())
 }

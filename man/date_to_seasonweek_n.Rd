@@ -13,5 +13,5 @@ date_to_seasonweek_n(x)
 Date to season week.
 }
 \examples{
-date_to_seasonweek_n(c("2021-01-01","2021-12-01"))
+date_to_seasonweek_n(c("2021-01-01", "2021-12-01"))
 }

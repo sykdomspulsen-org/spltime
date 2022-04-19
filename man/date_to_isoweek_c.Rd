@@ -16,6 +16,6 @@ ISO week in character
 ISO week (character) from Date object
 }
 \examples{
-date_to_isoyear_c('2021-08-11')
+date_to_isoyear_c("2021-08-11")
 date_to_isoyear_c(lubridate::today())
 }

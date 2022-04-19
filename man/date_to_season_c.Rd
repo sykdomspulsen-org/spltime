@@ -13,5 +13,5 @@ date_to_season_c(x)
 Date to season.
 }
 \examples{
-date_to_season_c(c("2021-01-01","2021-12-01"))
+date_to_season_c(c("2021-01-01", "2021-12-01"))
 }

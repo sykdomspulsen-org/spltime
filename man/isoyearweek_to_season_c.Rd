@@ -13,5 +13,5 @@ isoyearweek_to_season_c(x)
 ISO yearweek to season.
 }
 \examples{
-isoyearweek_to_season_c(c("2021-01","2021-50"))
+isoyearweek_to_season_c(c("2021-01", "2021-50"))
 }

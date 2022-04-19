@@ -16,6 +16,6 @@ calmonth ("XX")
 Date -> calmonth (character)
 }
 \examples{
-date_to_calmonth_c('2021-08-11')
+date_to_calmonth_c("2021-08-11")
 date_to_calmonth_c(lubridate::today())
 }
