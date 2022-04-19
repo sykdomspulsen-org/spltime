@@ -3,12 +3,12 @@
 #' @format
 #' \describe{
 #' \item{date}{Date.}
-#' \item{day_of_week}{1 = Monday, 7 = Sunday}
-#' \item{mon_to_fri}{1 between Monday and Friday, 0 between Saturday and Sunday}
-#' \item{sat_to_sun}{1 between Saturday and Sunday, 0 between Monday and Friday}
-#' \item{public_holiday}{1 if public holiday (helligdag), 0 if not public holiday}
-#' \item{freeday}{1 if public holiday (helligdag) or sat_to_sun==1, 0 otherwise}
-#' \item{workday}{1 if freeday==0, 0 if freeday==1}
+#' \item{day_of_week}{Integer. 1 = Monday, 7 = Sunday}
+#' \item{mon_to_fri}{Integer. 1 between Monday and Friday, 0 between Saturday and Sunday}
+#' \item{sat_to_sun}{Integer. 1 between Saturday and Sunday, 0 between Monday and Friday}
+#' \item{public_holiday}{Integer. 1 if public holiday (helligdag), 0 if not public holiday}
+#' \item{freeday}{Integer. 1 if public holiday (helligdag) or sat_to_sun==1, 0 otherwise}
+#' \item{workday}{Integer. 1 if freeday==0, 0 if freeday==1}
 #' }
 "norway_workdays_by_date"
 
