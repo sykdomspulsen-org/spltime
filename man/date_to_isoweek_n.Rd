@@ -16,6 +16,6 @@ ISO week in numeric
 ISO week (numeric) from Date object
 }
 \examples{
-date_to_isoweek_n('2021-08-11')
+date_to_isoweek_n("2021-08-11")
 date_to_isoweek_n(lubridate::today())
 }

@@ -16,6 +16,6 @@ ISO year in character
 Date -> calyear (character)
 }
 \examples{
-date_to_calyear_c('2021-08-11')
+date_to_calyear_c("2021-08-11")
 date_to_calyear_c(lubridate::today())
 }

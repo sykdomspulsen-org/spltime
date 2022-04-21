@@ -16,6 +16,6 @@ calmonth
 Date -> calmonth (numeric)
 }
 \examples{
-date_to_calmonth_n('2021-08-11')
+date_to_calmonth_n("2021-08-11")
 date_to_calmonth_n(lubridate::today())
 }

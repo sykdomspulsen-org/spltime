@@ -16,6 +16,6 @@ ISO year in numeric
 ISO year (numeric) from Date object
 }
 \examples{
-date_to_isoyear_n('2021-08-11')
+date_to_isoyear_n("2021-08-11")
 date_to_isoyear_n(lubridate::today())
 }
