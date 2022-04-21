@@ -1,0 +1,12 @@
+pandoc: '2.13'
+pkgdown: 2.0.1
+pkgdown_sha: ~
+articles:
+  date_conversion: date_conversion.html
+  season: season.html
+  spltime: spltime.html
+last_built: 2022-04-21T06:52Z
+urls:
+  reference: https://docs.sykdomspulsen.no/spltime/reference
+  article: https://docs.sykdomspulsen.no/spltime/articles
+
